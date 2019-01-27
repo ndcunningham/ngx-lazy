@@ -2,13 +2,49 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "ngx-lazy": {
+      "root": "libs/ngx-lazy",
+      "sourceRoot": "libs/ngx-lazy/src",
+      "projectType": "library",
+      "prefix": "ngx-lazy",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ngx-lazy/tsconfig.lib.json",
+            "project": "libs/ngx-lazy/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-lazy/tsconfig.lib.json",
+              "libs/ngx-lazy/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ngx-lazy/jest.config.js",
+            "tsConfig": "libs/ngx-lazy/tsconfig.spec.json",
+            "setupFile": "libs/ngx-lazy/src/test-setup.ts"
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
       "versionMismatch": false
     },
     "defaultCollection": "@nrwl/schematics"
-    
-  }
+  },
+  "defaultProject": "ngx-lazy"
 }

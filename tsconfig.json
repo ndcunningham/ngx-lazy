@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@ngx-lazy/ngx-lazy": [
+        "libs/ngx-lazy/src/index.ts"
+      ]
     }
   },
   "exclude": [
