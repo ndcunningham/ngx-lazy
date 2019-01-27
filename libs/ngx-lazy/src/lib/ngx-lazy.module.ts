@@ -4,6 +4,7 @@ import { LazyDirective } from './lazy.directive';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [LazyDirective]
+  declarations: [LazyDirective],
+  exports: [LazyDirective]
 })
 export class NgxLazyModule {}

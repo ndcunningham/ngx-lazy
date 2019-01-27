@@ -10,6 +10,12 @@
   "projects": {
     "ngx-lazy": {
       "tags": []
+    },
+    "example": {
+      "tags": []
+    },
+    "example-e2e": {
+      "tags": []
     }
   }
 }
