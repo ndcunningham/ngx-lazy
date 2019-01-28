@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-lazy/ngx-lazy",
+  "name": "ngx-lazy-image",
   "author": {
     "email": "ndcunningham@gmail.com",
     "name": "Nicholas Cunningham"
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ndcunningham/ngx-lazy",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
